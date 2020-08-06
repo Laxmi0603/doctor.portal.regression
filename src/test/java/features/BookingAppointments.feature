@@ -101,7 +101,7 @@ Feature: Booking Appointment from admin portal
       |In Hours|15:30|James Woods|Nurse Consultation |Dr. Lakshmi|        |
       |In Hours|16:00|James Woods|Occupational Health|Dr. Lakshmi|        |
 
-  @laxmi
+ # @laxmi
   Scenario Outline: Booking In Hours Appointment on Sunday (i.e on WeedEnds) from admin portal
 
     When  Admin select Appointments from left side panel and select Book Appointment

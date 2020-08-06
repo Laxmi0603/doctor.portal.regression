@@ -20,7 +20,7 @@ import utils.utilities;
         features = {"src/test/java/features/BookingAppointments.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
-       tags = {"@laxmi"},
+      // tags = {"@laxmi"},
         plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
         //plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 

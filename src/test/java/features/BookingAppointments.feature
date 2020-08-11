@@ -21,14 +21,14 @@ Feature: Booking Appointment from admin portal
     Then  Admin should get validation message to book for Out of Hours
 
     Examples:
-      | site   | time|patient    |AppointmentType    |DoctorName |comments|
-      |In Hours|01:00|James Woods|Health Screen      |Dr. Lakshmi|        |
-      |In Hours|05:30|James Woods|Consultation       |Dr. Lakshmi|        |
-      |In Hours|08:00|James Woods|Nurse Consultation |Dr. Lakshmi|        |
-      |In Hours|08:30|James Woods|Video Consultation |Dr. Lakshmi|        |
-      |In Hours|18:30|James Woods|Occupational Health|Dr. Lakshmi|        |
-      |In Hours|22:00|James Woods|Nurse Consultation |Dr. Lakshmi|        |
-      |In Hours|21:30|James Woods|Consultation       |Dr. Lakshmi|        |
+      | site   | time|patient    |AppointmentType    |DoctorName     |comments|
+      |In Hours|01:00|James Woods|Health Screen      |Dr Catrin Bevan|        |
+      |In Hours|05:30|James Woods|Consultation       |Dr Catrin Bevan|        |
+      |In Hours|08:00|James Woods|Nurse Consultation |Dr Catrin Bevan|        |
+      |In Hours|08:30|James Woods|Video Consultation |Dr Catrin Bevan|        |
+      |In Hours|18:30|James Woods|Occupational Health|Dr Catrin Bevan|        |
+      |In Hours|22:00|James Woods|Nurse Consultation |Dr Catrin Bevan|        |
+      |In Hours|21:30|James Woods|Consultation       |Dr Catrin Bevan|        |
 
 
   Scenario Outline: Booking In Hours Appointment with in the practice hours (i.e 9:00 to 17:30) from admin portal
@@ -42,14 +42,14 @@ Feature: Booking Appointment from admin portal
     And   Booking should be updated in All Appointment screen with Confirmed status
 
     Examples:
-      |site    |time |patient    |AppointmentType    |DoctorName |comments|
-      |In Hours|09:00|James Woods|Health Screen      |Dr. Lakshmi|        |
-      |In Hours|09:30|James Woods|Consultation       |Dr. Lakshmi|        |
-      |In Hours|11:30|James Woods|Video Consultation |Dr. Lakshmi|        |
-      |In Hours|13:00|James Woods|Occupational Health|Dr. Lakshmi|        |
-      |In Hours|15:30|James Woods|Health Screen      |Dr. Lakshmi|        |
-      |In Hours|17:00|James Woods|Nurse Consultation |Dr. Lakshmi|        |
-      |In Hours|17:30|James Woods|Consultation       |Dr. Lakshmi|        |
+      |site    |time |patient    |AppointmentType    |DoctorName|comments|
+      |In Hours|09:00|James Woods|Health Screen      |Dr Angela|        |
+      |In Hours|09:30|James Woods|Consultation       |Dr Angela|        |
+      |In Hours|11:30|James Woods|Video Consultation |Dr Angela|        |
+      |In Hours|13:00|James Woods|Occupational Health|Dr Angela|        |
+      |In Hours|15:30|James Woods|Health Screen      |Dr Angela|        |
+      |In Hours|17:00|James Woods|Nurse Consultation |Dr Angela|        |
+      |In Hours|17:30|James Woods|Consultation       |Dr Angela|        |
 
 
   Scenario Outline: Booking new appointment for registered patient by assigning the Doctor from the admin portal
@@ -63,9 +63,9 @@ Feature: Booking Appointment from admin portal
     And   Booking should be updated in All Appointment screen with Confirmed "<status>"
 
     Examples:
-      |site        |time |patient    |AppointmentType   |DoctorName |status   |comments|
-      |In Hours    |09:00|James Woods|Health Screen     |Dr. Lakshmi|Confirmed|        |
-      |Out of Hours|22:30|James Woods|Video Consultation|Dr. Lakshmi|Confirmed|        |
+      |site        |time |patient    |AppointmentType   |DoctorName  |status   |comments|
+      |In Hours    |09:00|James Woods|Health Screen     |Dr Ettlinger|Confirmed|        |
+      |Out of Hours|22:30|James Woods|Video Consultation|Dr Ettlinger|Confirmed|        |
 
  #@laxmi
   Scenario Outline: Booking new appointment for registered patient with out assign Doctor from the admin portal
@@ -94,12 +94,12 @@ Feature: Booking Appointment from admin portal
     Then  Admin should get validation message for booking weekend Appointment "On Saturdays and Sundays please select a Out of Hours."
 
     Examples:
-      |site    |time |patient    |AppointmentType    |DoctorName |comments|
-      |In Hours|09:00|James Woods|Health Screen      |Dr. Lakshmi|        |
-      |In Hours|09:30|James Woods|Consultation       |Dr. Lakshmi|        |
-      |In Hours|12:30|James Woods|Video Consultation |Dr. Lakshmi|        |
-      |In Hours|15:30|James Woods|Nurse Consultation |Dr. Lakshmi|        |
-      |In Hours|16:00|James Woods|Occupational Health|Dr. Lakshmi|        |
+      |site    |time |patient    |AppointmentType    |DoctorName    |comments|
+      |In Hours|09:00|James Woods|Health Screen      |Dr Sam Bennett|        |
+      |In Hours|09:30|James Woods|Consultation       |Dr Sam Bennett|        |
+      |In Hours|12:30|James Woods|Video Consultation |Dr Sam Bennett|        |
+      |In Hours|15:30|James Woods|Nurse Consultation |Dr Sam Bennett|        |
+      |In Hours|16:00|James Woods|Occupational Health|Dr Sam Bennett|        |
 
  # @laxmi
   Scenario Outline: Booking In Hours Appointment on Sunday (i.e on WeedEnds) from admin portal
@@ -112,9 +112,9 @@ Feature: Booking Appointment from admin portal
     Then  Admin should get validation message for booking weekend Appointment "On Saturdays and Sundays please select a Out of Hours."
 
     Examples:
-      |site    |time |patient    |AppointmentType    |DoctorName |comments|
-      |In Hours|09:00|James Woods|Health Screen      |Dr. Lakshmi|        |
-      |In Hours|10:30|James Woods|Consultation       |Dr. Lakshmi|        |
-      |In Hours|12:30|James Woods|Video Consultation |Dr. Lakshmi|        |
-      |In Hours|13:30|James Woods|Nurse Consultation |Dr. Lakshmi|        |
-      |In Hours|15:00|James Woods|Occupational Health|Dr. Lakshmi|        |
+      |site    |time |patient    |AppointmentType    |DoctorName       |comments|
+      |In Hours|09:00|James Woods|Health Screen      |Dr Stuart Sanders|        |
+      |In Hours|10:30|James Woods|Consultation       |Dr Stuart Sanders|        |
+      |In Hours|12:30|James Woods|Video Consultation |Dr Stuart Sanders|        |
+      |In Hours|13:30|James Woods|Nurse Consultation |Dr Stuart Sanders|        |
+      |In Hours|15:00|James Woods|Occupational Health|Dr Stuart Sanders|        |
